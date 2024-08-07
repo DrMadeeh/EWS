@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCS and EWS Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Monitoring System</h1>
+
+        <h2>Glasgow Coma Scale (GCS)</h2>
+        <form id="gcs-form">
+            <label for="eye-response">Eye Response:</label>
+            <select id="eye-response" name="eye-response">
+                <option value="4">4 - Spontaneous</option>
+                <option value="3">3 - To sound</option>
+                <option value="2">2 - To pressure</option>
+                <option value="1">1 - None</option>
+            </select>
+
+            <label for="verbal-response">Verbal Response:</label>
+            <select id="verbal-response" name="verbal-response">
+                <option value="5">5 - Orientated</option>
+                <option value="4">4 - Confused</option>
+                <option value="3">3 - Words</option>
+                <option value="2">2 - Sounds</option>
+                <option value="1">1 - None</option>
+            </select>
+
+            <label for="motor-response">Motor Response:</label>
+            <select id="motor-response" name="motor-response">
+                <option value="6">6 - Obeys commands</option>
+                <option value="5">5 - Localising</option>
+                <option value="4">4 - Normal flexion</option>
+                <option value="3">3 - Abnormal flexion</option>
+                <option value="2">2 - Extension</option>
+                <option value="1">1 - None</option>
+            </select>
+
+            <button type="button" onclick="calculateGCS()">Calculate GCS</button>
+        </form>
+        <div id="gcs-result"></div>
+
+        <h2>Early Warning Signs (EWS)</h2>
+        <form id="ews-form">
+            <label for="heart-rate">Heart Rate:</label>
+            <input type="number" id="heart-rate" name="heart-rate">
+
+            <label for="blood-pressure">Blood Pressure:</label>
+            <input type="number" id="blood-pressure" name="blood-pressure">
+
+            <label for="respiratory-rate">Respiratory Rate:</label>
+            <input type="number" id="respiratory-rate" name="respiratory-rate">
+
+            <label for="oxygen-saturation">Oxygen Saturation:</label>
+            <input type="number" id="oxygen-saturation" name="oxygen-saturation">
+
+            <label for="temperature">Temperature:</label>
+            <input type="number" id="temperature" name="temperature">
+
+            <label for="consciousness">Level of Consciousness:</label>
+            <select id="consciousness" name="consciousness">
+                <option value="alert">Alert</option>
+                <option value="verbal">Verbal</option>
+                <option value="pain">Pain</option>
+                <option value="unresponsive">Unresponsive</option>
+            </select>
+
+            <button type="button" onclick="calculateEWS()">Calculate EWS</button>
+        </form>
+        <div id="ews-result"></div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
